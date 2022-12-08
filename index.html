@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Tienda</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light fixed-top bg-dark min-vw-100">
+        <h2 class="p-3 text-white">Ragnar Tattoo Shop</h2>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#modal"
+            >
+            <button class="icono-carrito"><img class="imagenCarrito" src="./img/34627.png" alt=""><span id="carritoContenedor" class="contadorCarrito">  0  </span></button>
+            <!-- <i class="bi bi-cart mx-5" id="carritoContenedor">0</i> -->
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="row mt-5" id="contenedor"></div>
+    </main>
+    
+
+    <div class="container-xl">
+      <div class="modal" tabindex="-1" role="dialog" id="modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Carrito</h5>
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="vaciarCarrito">
+                Vaciar carrito
+              </button>
+              <button type="button" id="procesarCompra" class="btn BotonProcesarCompra">
+                Continuar compra
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+
+              <span class="spanPrecio">Precio total:</span>
+              <p class="text-center" id="precioTotal"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- carrousel tienda -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://res.cloudinary.com/ariel666/image/upload/v1662580243/tattuando_toxdji.jpg"
+            class="d-block w-100" alt="tattuando">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>10% Descuento en Tattoos B&G</h5>
+            <p>Descuentos increibles en tattoos estilo Black & Grey</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/ariel666/image/upload/v1662580244/titnasvarias_wttczq.jpg"
+            class="d-block w-100" alt="tintas-varias">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>15% Descuento en tintas nacionales</h5>
+            <p>tintas nacionales a muy buen precio</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://res.cloudinary.com/ariel666/image/upload/v1662580241/tattuando_2_ahv40s.jpg"
+            class="d-block w-100" alt="tattuando2">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>15% Descuento en maquinas bobinas nacionales</h5>
+            <p>maquinas de tattoo nacionales con descuento</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    
+
+      
+    <!-- boton volver arriba -->
+    <div class="boton-arriba">
+      <p class="boton">Volver arriba</p>
+    </div>
+  </main>
+
+  <!-- Pie de Pagina Footer -->
+  <footer class="footer">
+    <p class="nuestras-redes">Nuestras Redes</p>
+    <div class="redes">
+      
+      <a href="https://www.instagram.com/ragnartattoo/" target="_blank">
+        <img src="https://res.cloudinary.com/ariel666/image/upload/v1662580277/instagram_qowj0y.png"
+          alt="logo-instagram">
+        <a href="https://www.facebook.com/RagnarTattoo-1128982540539770" target="_blank">
+          <img src="https://res.cloudinary.com/ariel666/image/upload/v1662580277/facebook_gdlqh2.png" alt="logo-ragnar">
+         
+          <a href="https://api.whatsapp.com/send?phone=541164970203" class="animate__animated animate__pulse animate__infinite	infinite whatsapp" target="_blank">
+            <img src="https://res.cloudinary.com/ariel666/image/upload/v1662580277/whatsapp_sba5ok.png" alt="logo-whatsapp">
+          </a>
+    </div>
+    <div class="copyright">
+          <!-- Creditos diseñador -->
+          <p>Web desarrollada por Ariel Ballesteros Ⓒ </p>
+    </div>
+  </footer>
+
+
+    <script src="app.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
